@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rowdies:wght@300;400;700&display=swap');
+/*reset*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 62.5%;/*se traduce a 10 px=1em*/
+}
+ol, ul {
+	list-style: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  dialog {
+    background: transparent; 
+    border: none;          
+    padding: 0;              
+    width: 100vw;            
+    height: 100vh;           
+    max-width: 100%;        
+    max-height: 100%;
+    overflow: hidden;  
+}
+/*----FIN RESET---*/
+/*CSS VARIABLES*/
+:root{
+    /*----colores----*/
+    --color-blanco:#FFFBFA;
+    --color-beige:#e4dfde;
+    --color-negro:#432b38;
+    --color-gris:#736a6e;
+    --color-verde1:#9AB87A;
+    --color-verde2:#475841;
+    --color-rosa:#9B6A6C;
+    /*----tipografias---*/
+    --fuente-titulo:"Crimson Text", serif;
+    --fuente-texto:"Nunito Sans", sans-serif;
+    --fuente-detalle:"Rowdies", sans-serif;
+    /*tamaños de tipografias*/
+    --size-h1:3.5rem;
+    --size-h2:2rem;
+    --size-h3:1.5rem;
+    --size-h4:1rem;
+    --size-h5:0.8rem;
+}
+/*----CLASES UTILES-----*/
+/*-FLEXBOX-*/
+.flex{
+    display: flex;
+}
+.ai-end{
+    align-items: flex-end;
+}
+.d-block{
+    display: block;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.jc-start{
+    justify-content: flex-start;
+}
+.jc-end{
+    justify-content: flex-end;
+}
+.ai-center{
+    align-items: center;
+}
+.jc-center{
+    justify-content: center;
+}
+.fd-column{
+    flex-direction: column;
+}
+.jc-sbetween{
+    justify-content: space-between;
+}
+.fd-row-reverse{
+    flex-direction: row-reverse;
+}
+/*-------WITH------*/
+.w-100{
+    width: 100%;
+}
+.w-5{
+    width: 5%;
+}
+.w-30{
+    width: 30%;
+}
+.w-25{
+    width: 25%; 
+}
+.w-23{
+    width: 23%;
+}
+.w-60{
+    width: 60%;
+}
+.w-65{
+    width: 65%;
+}
+.w-40{
+    width: 40%;
+}
+.w-70{
+    width: 70%;
+}
+.w-50{
+    width: 50%;
+}
+.w-80{
+    width: 80%;
+}
+.w-85{
+    width: 85%;
+}
+.w-90{
+    width: 90%;
+}
+.w-12{
+    width: 12%;
+}
+.w-24{
+    width: 24%;
+}
+/*----HEIGHT---*/
+.height100-{
+    height: 100%;
+}
+.height60{
+    height: 60vh;
+}
+.height100{
+    height: 100vh;
+}
+.height90{
+    height: 90vh;
+}
+.height80{
+    height: 80vh;
+}
+.h-40{
+    height: 40vh;
+}
+.height55{
+    height: 55vh;
+}
+.height4{
+    height: 4vh;
+}
+.height6{
+    height: 6vh;
+}
+.h-10{
+    height: 10vh;
+}
+.h-15{
+    height: 15vh;
+}
+/*---Margins---*/
+.m-1{
+    margin: 0 1em;
+}
+/*----Paddings----*/
+/*bottom*/
+.mb-2{
+    margin-bottom: 2em;
+}
+/*---TIPOGRAFIAS---*/
+.title-main{
+    font-family: var(--fuente-titulo);
+}
+.text-body{
+    font-family: var(--fuente-texto);
+}
+.text-detail{
+    font-family: var(--fuente-detalle);
+}
+/*estilos*/
+.center{
+    text-align: center; 
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+.ita{
+    font-style: italic;
+}
+.normal{
+    font-style: normal;
+}
+.light{
+     font-weight: 100;
+}
+/*tamaños*/
+.f-detail{
+    font-size: var(--size-h5);
+}
+.f-base{
+    font-size: var(--size-h4);
+}
+.f-section{
+    font-size: var(--size-h3);
+}
+.f-subtitle{
+    font-size: var(--size-h2);
+}
+.f-title{
+    font-size: var(--size-h1);
+}
+/*----COLORES----*/
+/*textos*/
+.text-base{
+    color:  var(--color-negro);
+}
+.text-secundary{
+    color:var(--color-gris);
+}
+.text-terciary{
+    color: var(--color-verde1);
+}
+.text-quaternary{
+    color: var(--color-verde2);
+}
+.text-contrast{
+    color: var(--color-blanco);
+}
+.text-acent{
+    color:var(--color-rosa);
+}
+/*fondos*/
+.bg-main{
+    background-color: var(--color-blanco);
+}
+.bg-secundary{
+    background-color: var(--color-verde1);
+}
+.bg-terciary{
+    background-color: var(--color-rosa);
+}
+.bg-quaternary{
+    background-color: var(--color-verde2);
+}
+.bg-dark{
+    background-color: var(--color-negro);
+}
+/*----MARGINS---*/
+.mt-2{
+    margin-top: 2em;
+}
+.mb-05{
+    margin-bottom: 0.5em;
+}
+.mt-1{
+    margin-top: 1em;
+}
+/*Contenedores*/
+.hidden{
+    overflow: hidden;
+}
+.cont-img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+/*--HEADER---*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    z-index: 10;
+    padding: 2rem 0;
+    transition: 0.4s;
+}
+.logo-header{
+    position: relative;
+    transition: 1.5s;
+}
+header.abajo{
+    background-color:var(--color-negro) ;
+    padding: 1rem 0;
+}
+header.abajo .logo-header, 
+header.abajo ul li a{
+    color: var(--color-blanco);
+}
+.redes li{
+    margin: 0 0.5em;
+}
+.header-container li:hover{
+    color: var(--color-verde1);
+}
+.header-container li a:hover,
+.redes li a:hover {
+    color: var(--color-verde1);
+    transition: 0.3s;
+}
+/*--SECTION HERO--*/
+.section-hero{
+    padding-top: 5em;
+    background-image: url('/assets/images/2026-recetas-hero.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-container h1{
+    font-size: 3rem;
+    width: 80%;
+    color: var(--color-negro);
+}
+.hero-container p{
+    margin-top: 1em;
+    font-size: 1.4rem;
+}
+.hero-container button{
+    background-color: var(--color-negro);
+    border: transparent;
+    color: var(--color-blanco);
+    padding: 0.5em 4em;
+    margin-top: 2em;
+    font-size: var(--size-h4);
+    font-family: var(--fuente-texto);
+    border-radius: 1em;
+    cursor: pointer;
+}
+.hero-container button:hover{
+    background-color: var(--color-verde1);
+}
+.hero-cont-img{
+    border-radius: 0.5em;
+     margin: 0.5em;
+}
+.circulo-i{
+    border-radius: 50%;
+    padding: 2em;
+    margin: 1em;
+    background-color: var(--color-blanco);
+}
+.section2 i{
+    font-size: 3rem;
+    color: var(--color-negro);
+}
+.section2 h4{
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
+}
+.section2 article{
+    margin: 2em;
+}
+/*-----SECTION PRINCIPALES---*/
+#sect-principales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    padding: 20px;
+}
+.s-principales{
+    padding: 5em 0;
+}
+.principales h4{
+     font-family: var(--fuente-titulo);
+     font-weight: 100;
+     color: var(--color-negro);
+     font-size: var(--size-h4);
+}
+.principales p{
+    font-size: var(--size-h5);
+    font-family: var(--fuente-texto);
+    color: var(--color-gris);
+}
+.card-principales{
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.principales:hover{
+    background-color: var(--color-verde1);
+    transition: 0.6s;
+}
+.principales:hover p, .principales:hover h4{
+    color: var(--color-blanco);
+}
+.principales:hover button{
+    border-color: var(--color-blanco);
+    color: var(--color-blanco);
+}
+.card-principales button{
+    margin-top: 0.5em;
+    background: none;
+    border: solid 0.1em var(--color-rosa);
+    border-radius: 1em;
+    color:var(--color-rosa);
+    cursor: pointer;
+    font-size: var(--size-h5);
+    font-family: var(--fuente-texto);
+}
+.card-principales button:hover{
+    border: transparent;
+    background-color: var(--color-rosa);
+    color: var(--color-blanco);
+    transition: 0.2s;
+}
+/*------SECTION SOBRE NOSOTROS----*/
+.nosotros{
+    padding: 5em;
+}
+.nosotros h3{
+    margin-bottom: 1em;
+}
+.nosotros button{
+    width: 50%;
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
+    border: transparent;
+    padding: 0.6em;
+    border-radius: 1em;
+    font-size: var(--size-h4);
+    margin-top: 2em;
+    font-family: var(--fuente-texto);
+    cursor: pointer;
+}
+.nosotros button:hover{
+    transform: scale(1.05);
+}
+/*------------SECTION ENTRADAS-------*/
+.s-entradas{
+   background-color: var(--color-beige);
+   background-image: url('/assets/images/2026-recetas-entradas-set.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+} 
+.s-entradas{
+    padding: 8em 0;
+}
+#sect-entradas article{
+   width: 30%;
+   background-color: var(--color-blanco);
+   position: relative;
+   border-radius: 2em;
+   overflow: hidden;
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+#sect-entradas article:hover{
+    transform: scale(1.02);
+    transition: all ease 2s;
+    cursor: pointer;
+}
+#sect-entradas article:hover p,#sect-entradas article:hover h4 {
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 0.2s ease, visibility 0.5s ease;
+}
+.cont-entradas{
+    padding: 3em;
+    border-radius: 2em;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: var(--color-blanco);
+}
+.card-entradas{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(rgba(69, 71, 71, 0.6), rgba(72, 75, 72, 0.6));
+}
+.entradas p{
+    color: var(--color-blanco);
+    font-size: var(--size-h5);
+    font-family: var(--fuente-texto);
+}
+.entradas h4{
+     font-family: var(--fuente-titulo);
+     font-weight: 100;
+     color: var(--color-blanco);
+     font-size: var(--size-h4);
+}
+.entradas button{
+   opacity: 0;
+   position: absolute;
+   background-color: transparent;
+   border: transparent;
+}
+ .entradas:hover button{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-blanco);
+    font-size: var(--size-h4);
+    font-family: var(--fuente-texto);
+    cursor: pointer;
+} 
+.entradas:hover button:hover{
+    color: var(--color-verde1);
+}
+/*------SECTION VEGETARIAN-----*/
+.s-vegetarianas{
+    padding: 6em 0;
+    background-image: url('/assets/images/2026-recetas-home-entradas.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sect-vegetarianas article{
+    width: 25%;
+    margin: 1em;
+    background-color: var(--color-blanco);
+    overflow: hidden;
+    border-radius: 2em;
+    cursor: pointer;
+    padding: 1em;
+}
+#sect-vegetarianas article:hover{
+    background-color: rgb(214, 214, 214);
+}
+#sect-vegetarianas article:hover h4{
+    color: var(--color-negro);
+}
+.card-vegetarianas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.vegetarianas img{
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.card-vegetarianas h4{
+    font-family: var(--fuente-texto);
+     font-weight: 100;
+     color: var(--color-rosa);
+     font-size: var(--size-h4);
+     margin-top: 0.7em;
+}
+.card-vegetarianas p{
+    display: none;
+}
+ .card-vegetarianas button {
+    background-color: var(--color-rosa); 
+    border: 0.1em solid var(--color-rosa); 
+    padding: 0.5em 2em;
+    font-size: var(--size-h5);
+    margin-top: 0.8em;
+    border-radius: 0.6em;
+    color: var(--color-blanco);
+    font-family: var(--fuente-texto);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; 
+    transition: color 0.4s ease; 
+}
+.card-vegetarianas button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0; 
+    height: 0;
+    background-color: var(--color-blanco); 
+    border-radius: 50%; 
+    z-index: -1; 
+    transition: width 0.5s ease, height 0.5s ease;
+    transform: translate(-50%, -50%); 
+}
+.card-vegetarianas button:hover {
+    color: var(--color-rosa); 
+}
+.card-vegetarianas button:hover::before {
+    width: 300%; 
+    height: 600%; 
+}
+/*------------PAGINA DETALLE---------*/
+.section-detalle{
+    background-image: url('/assets/images/2026-recetas-detalle.jpg') ;
+    padding: 8em 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-detalle img{
+    width: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+.cont-ingredientes{
+    margin: 1em 0;
+    padding: 1em;
+     border-radius: 2em;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+#ingredientes{
+    margin-top: 0.1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.4em 1em; 
+}
+#ingredientes li {
+    font-family: var(--fuente-texto);
+    font-size: var(--size-h5);
+    color: var(--color-negro);
+    display: flex; 
+    align-items: center; 
+    gap: 0.2em;   
+    margin-bottom: 0.2em;
+}
+
+#ingredientes li::before {
+    content: "";
+    flex-shrink: 0;     
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-gris); 
+    border-radius: 50%;
+}
+#instrucciones li{
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-family: var(--fuente-texto);
+    font-size: var(--size-h4);
+    color: var(--color-negro);
+}
+#receta-rating{
+    margin-right: 1em;
+}
+/*footer*/
+footer{
+    padding: 5em 0;
+}
+.cont-footer p{
+    margin: 1em 0;
+}
+/*---------------------------------------------*/
+@media(max-width:990px){
+     :root{
+        --size-h1:3rem;
+        --size-h2:1.7rem;
+        --size-h3:1.3rem;
+        --size-h4:0.9rem;
+        --size-h5:0.7rem;
+    
+    }
+     .img-hero{
+        display: none;
+    }
+    .cont-nosotros article{
+        width: 80%;
+    }
+    .cont-entradas{
+        width: 80%;
+    }
+    #sect-vegetarianas{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+     :root{
+         --size-h1:2.6rem;
+        --size-h2:1.5rem;
+        --size-h3:1.2rem;
+        --size-h4:0.8rem;
+        --size-h5:0.7rem;
+    }
+
+
+}
+
+   
+   
